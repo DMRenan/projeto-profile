@@ -85,11 +85,12 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: toggle-button-slide-to-left .2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: toggle-button-slide-to-right .2s forwards;
 }
 
 #switch span {
@@ -176,5 +177,26 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation  */
+@keyframes toggle-button-slide-to-right {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes toggle-button-slide-to-left {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
   }
 }
