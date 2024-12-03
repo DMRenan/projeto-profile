@@ -89,6 +89,10 @@ body * {
   animation: toggle-button-slide-to-left .2s;
 }
 
+#switch button:hover {
+  outline: 8px solid var(--highlight-color)
+}
+
 .light #switch button {
   animation: toggle-button-slide-to-right .2s forwards;
 }
